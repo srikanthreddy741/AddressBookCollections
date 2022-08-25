@@ -166,5 +166,19 @@ namespace AddressBookProblems
 				Console.WriteLine($"Contect not Found From {0}", countPlace);
 			}
 		}
+		public void SortAlphabetically()
+		{
+			List<string> sortedList = new List<string>();
+			foreach (ContactPerson getContacts in userList)
+			{
+				string sortByFirstName = getContacts.firstName.ToString();
+				sortedList.Add(sortByFirstName);
+			}
+			sortedList.Sort();
+			foreach (string sortedContact in sortedList)
+			{
+				Console.WriteLine(sortedContact);
+			}
+		}
 	}
 }

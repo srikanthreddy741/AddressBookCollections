@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace AddressBookProblems
 {
-
 	public class ContactPerson
 	{
 		public String firstName;
