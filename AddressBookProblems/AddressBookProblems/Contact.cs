@@ -17,8 +17,6 @@ namespace AddressBookProblems
         public string Zip;
         public string PhoneNumber;
         public string EmailId;
-
-
         public void GetUserInfo()
         {
             Console.WriteLine("Enter First Name: ");
@@ -37,9 +35,7 @@ namespace AddressBookProblems
             PhoneNumber = Console.ReadLine();
             Console.WriteLine("Enter EmailId: ");
             EmailId = Console.ReadLine();
-
         }
-
         //Method To Display The Details
         public void Display()
         {
@@ -52,10 +48,10 @@ namespace AddressBookProblems
             Console.WriteLine("*PhoneNumber:" + PhoneNumber);
             Console.WriteLine("*EmailId:" + EmailId);
         }
-
         public string GetName()
         {
             return FirstName + " " + LastName;
         }
+
     }
 }
