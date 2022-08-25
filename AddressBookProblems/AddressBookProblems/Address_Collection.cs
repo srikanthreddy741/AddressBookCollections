@@ -8,6 +8,7 @@ namespace AddressBookProblems
 {
 	internal class AddressBook
 	{
+
 		public static Dictionary<string, MultipleAddressBook> addressBookDict = new Dictionary<string, MultipleAddressBook>();
 		public static MultipleAddressBook multiadd = new MultipleAddressBook();
 		public static void Main(string[] args)
@@ -18,7 +19,7 @@ namespace AddressBookProblems
 			while (flag)
 			{
 				Console.WriteLine("******WELCOME TO ADDRESS BOOK******");
-				Console.WriteLine("1. Create_AddressBooks \n2. Open_AddressBooks \n3. Count_TotalContacts \n4. Serch_FromAllContact \n5. DeletAddressBook \n6. Exit");
+				Console.WriteLine("1.Create_AddressBooks \n2.Open_AddressBooks \n3.Count_TotalContacts \n4.Serch_FromAllContact \n5.DeletAddressBook \n6.StoreContactsIn_TextFile \n7.ReadContactsFrom_TextFile \n8.Exit");
 				int choice = Convert.ToInt32(Console.ReadLine());
 				int size = addressBookDict.Count;
 				switch (choice)
@@ -111,6 +112,28 @@ namespace AddressBookProblems
 						}
 						break;
 					case 6:
+						Console.WriteLine($"You have {size} AddressBook.");
+
+						foreach (var address in addressBookDict.Keys)
+						{
+							Console.WriteLine(address);
+						}
+						Console.Write("Enter Address_BookName : ");
+						string addressBokk = Console.ReadLine();
+						addressBookDict[addressBokk].writeInTxtFile();
+						break;
+					case 7:
+						Console.WriteLine($"You have {size} AddressBook.");
+
+						foreach (var address in addressBookDict.Keys)
+						{
+							Console.WriteLine(address);
+						}
+						Console.Write("Enter Address_BookName : ");
+						string readContacts = Console.ReadLine();
+						addressBookDict[readContacts].readFromTxtFile();
+						break;
+					case 8:
 						flag = false;
 						break;
 					default:

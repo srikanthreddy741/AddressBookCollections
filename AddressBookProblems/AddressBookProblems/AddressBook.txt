@@ -1,0 +1,3 @@
+﻿
+FirstName	LastName	 Addaddress	  City  	      State	        Zip	     Contact	 Email
+srikanth    	Reddy	lingapoor	   Kamareddy	Telangana	503111  	9000175741	srikanth@gmail.com

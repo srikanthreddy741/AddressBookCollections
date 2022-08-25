@@ -39,7 +39,7 @@ namespace AddressBookProblems
 			if (userList.Count() > 0)
 			{
 				Console.WriteLine("----------------------------------------------------------------------");
-				Console.WriteLine("FirstName   LastName   Address,  City,  State,  Zip,   Contact,  Email");
+				Console.WriteLine("FirstName  LastName  Address,  City,  State,  Zip,   Contact,   Email");
 				Console.WriteLine("----------------------------------------------------------------------");
 				foreach (ContactPerson cont in userList)
 				{
@@ -204,6 +204,15 @@ namespace AddressBookProblems
 					}
 					break;
 			}
+		}
+		public void writeInTxtFile()
+		{
+			FileWriter.WriteUsingStreamWriter(userList);
+			Console.WriteLine("Contacts Stored in TextFile.");
+		}
+		public void readFromTxtFile()
+		{
+			FileWriter.readFile();
 		}
 	}
 }
